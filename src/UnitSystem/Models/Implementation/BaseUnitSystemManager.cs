@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using UnitSystem.Models;
-using UnitSystem.Models.Loading;
+using UnitSystem.Loader;
 
-namespace UnitSystem.Implementation
+namespace UnitSystem.Models.Implementation
 {
   public class BaseUnitSystemManager : IUnitSystemManager
   {
@@ -13,10 +13,8 @@ namespace UnitSystem.Implementation
 
     public BaseUnitSystemManager(IUnitSystemLoader loader)
     {
-      this.DimensionCol = loader != null ? loader.LoadData() : new List<IUnitDimension>();
+      this.DimensionCol = loader != null ? loader.Dimensions.ToList() : new List<IUnitDimension>();
       this.Dimensions = new UnitDimensionCollection(this.DimensionCol);
-
-      this.LoadData(loader);
     }
 
     public IUnitDimensionCollection Dimensions { get; private set; }
@@ -31,16 +29,6 @@ namespace UnitSystem.Implementation
     public IUnitOfMeasure FindUnitOfMeasure(string dimensionCode, string uomCode)
     {
       return this.Dimensions.FirstOrDefault(d => string.Equals(d.Code, dimensionCode, StringComparison.OrdinalIgnoreCase))?.Units.FirstOrDefault(u => string.Equals(u.Code, uomCode, StringComparison.OrdinalIgnoreCase));
-    }
-
-    private void LoadData(IUnitSystemLoader loader)
-    {
-      if (loader == null)
-      {
-        return;
-      }
-
-
     }
   }
 }

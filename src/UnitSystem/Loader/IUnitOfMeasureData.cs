@@ -4,7 +4,7 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Models.Loading
+namespace UnitSystem.Loader
 {
   public interface IUnitOfMeasureData
   {
@@ -16,6 +16,6 @@ namespace UnitSystem.Models.Loading
 
     double Offset { get; set; }
 
-    IEnumerable<IComponentData> Components { get; set; }
+    IEnumerable<string> Components { get; set; }
   }
 }

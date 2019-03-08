@@ -5,7 +5,7 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Implementation
+namespace UnitSystem.Models.Implementation
 {
   public class UnitOfMeasureComponentCollection : ReadOnlyCollection<IUnitOfMeasureComponent>, IUnitOfMeasureComponentCollection
   {

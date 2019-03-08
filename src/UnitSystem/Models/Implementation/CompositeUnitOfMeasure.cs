@@ -4,22 +4,22 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Implementation
+namespace UnitSystem.Models.Implementation
 {
   public class CompositeUnitOfMeasure : UnitOfMeasure, ICompositeUnitOfMeasure
   {
     private readonly ICompositeUnitDimension CompositeDimension;
 
-    public CompositeUnitOfMeasure(ICompositeUnitDimension dimension, string code, IList<string> components) : base(dimension, code)
+    public CompositeUnitOfMeasure(ICompositeUnitDimension dimension, string code, IEnumerable<string> components) : base(dimension, code)
     {
       this.CompositeDimension = dimension;
 
-      if (components.Count != this.CompositeDimension.Components.Count)
+      if (components.Count() != this.CompositeDimension.Components.Count)
       {
         throw new ArgumentException("A composite unit of measure needs the same number of components as it's dimension.", nameof(components));
       }
 
-      this.Components = new UnitOfMeasureComponentCollection(GetComponentUnits(components));
+      this.Components = new UnitOfMeasureComponentCollection(GetComponentUnits(components.ToList()));
     }
 
     public UnitOfMeasureComponentCollection Components { get; private set; }

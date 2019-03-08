@@ -4,10 +4,10 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Models.Loading
+namespace UnitSystem.Loader
 {
   public interface IUnitSystemLoader
   {
-    IList<IUnitDimension> LoadData();
+    IEnumerable<IUnitDimension> Dimensions { get; }
   }
 }

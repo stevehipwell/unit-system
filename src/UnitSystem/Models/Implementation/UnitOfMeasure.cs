@@ -4,7 +4,7 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Implementation
+namespace UnitSystem.Models.Implementation
 {
   public abstract class UnitOfMeasure : IUnitOfMeasure
   {

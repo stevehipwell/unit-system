@@ -4,8 +4,8 @@ using Xunit;
 
 using UnitSystem;
 using UnitSystem.Models;
-using UnitSystem.Implementation;
-using UnitSystem.Models.Loading;
+using UnitSystem.Models.Implementation;
+using UnitSystem.Loader;
 
 namespace UnitSystemTest
 {
@@ -44,7 +44,7 @@ namespace UnitSystemTest
       UnitSystemManager.SetLoader(fakeLoader);
       var instance = UnitSystemManager.Instance;
 
-      A.CallTo(() => fakeLoader.LoadData()).MustHaveHappened();
+      A.CallTo(() => fakeLoader.Dimensions).MustHaveHappened();
     }
   }
 }

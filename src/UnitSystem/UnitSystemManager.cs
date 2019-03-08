@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using UnitSystem.Implementation;
 using UnitSystem.Models;
-using UnitSystem.Models.Loading;
+using UnitSystem.Loader;
+using UnitSystem.Models.Implementation;
 
 namespace UnitSystem
 {

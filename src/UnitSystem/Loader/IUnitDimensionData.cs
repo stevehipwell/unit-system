@@ -4,7 +4,7 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Models.Loading
+namespace UnitSystem.Loader
 {
   public interface IUnitDimensionData
   {
@@ -12,7 +12,7 @@ namespace UnitSystem.Models.Loading
 
     bool IsComposite { get; set; }
 
-    IEnumerable<IComponentData> Components { get; set; }
+    IEnumerable<IUnitDimensionComponentData> Components { get; set; }
 
     IEnumerable<IUnitOfMeasureData> Units { get; set; }
   }

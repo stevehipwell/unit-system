@@ -4,12 +4,12 @@ using System.Linq;
 
 using UnitSystem.Models;
 
-namespace UnitSystem.Models.Loading
+namespace UnitSystem.Loader
 {
-  public interface IComponentData
+  public interface IUnitDimensionComponentData
   {
     string Code { get; set; }
 
-    int OffsPoweret { get; set; }
+    int Power { get; set; }
   }
 }
