@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnitSystem.Model
+namespace UnitSystem.Models
 {
   public interface IUnitDimension
   {

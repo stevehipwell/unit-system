@@ -1,6 +1,6 @@
 using System;
 
-namespace UnitSystem.Model
+namespace UnitSystem.Models
 {
   public interface IUnitOfMeasure
   {
