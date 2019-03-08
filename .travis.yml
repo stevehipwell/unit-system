@@ -1,5 +1,5 @@
 language: csharp
-dotnet: 2.2
+dotnet: 2.2.104
 
 env:
   - FrameworkPathOverride=/usr/lib/mono/4.5/

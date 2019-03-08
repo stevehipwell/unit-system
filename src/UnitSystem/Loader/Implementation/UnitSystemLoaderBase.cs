@@ -10,8 +10,13 @@ namespace UnitSystem.Loader.Implementation
 {
   public abstract class UnitSystemLoaderBase : IUnitSystemLoader
   {
-    private IEnumerable<IUnitDimensionData> SourceData;
+    private readonly IEnumerable<IUnitDimensionData> SourceData;
     private IList<IUnitDimension> DimensionCol;
+
+    protected UnitSystemLoaderBase(IEnumerable<IUnitDimensionData> sourceData)
+    {
+      this.SourceData = sourceData;
+    }
 
     public IEnumerable<IUnitDimension> Dimensions
     {
@@ -26,11 +31,8 @@ namespace UnitSystem.Loader.Implementation
       }
     }
 
-    protected abstract IEnumerable<IUnitDimensionData> LoadSourceData();
-
     private void LoadData()
     {
-      this.SourceData = this.LoadSourceData();
       this.DimensionCol = new List<IUnitDimension>();
 
       this.LoadDimensions();
