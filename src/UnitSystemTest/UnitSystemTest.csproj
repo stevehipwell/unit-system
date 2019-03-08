@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>0.0.0</Version>
+    <Authors>Steve Hipwell</Authors>
+    <Company></Company>
+    <Product>UnitSystem</Product>
+    <RootNamespace>UnitSystemTest</RootNamespace>
+    <AssemblyName>UnitSystemTest</AssemblyName>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Copyright>Copyright (C) 2019 Steve Hipwell</Copyright>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnitSystem\UnitSystem.csproj" />
+  </ItemGroup>
+</Project>
