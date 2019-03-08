@@ -2,7 +2,7 @@ using System;
 using FakeItEasy;
 using Xunit;
 
-using UnitSystem.Models;
+using UnitSystem.Model;
 using UnitSystem.Loader.Implementation;
 using UnitSystem.Loader;
 

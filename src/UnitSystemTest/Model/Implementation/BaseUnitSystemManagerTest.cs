@@ -2,10 +2,10 @@ using System;
 using FakeItEasy;
 using Xunit;
 
-using UnitSystem.Models;
-using UnitSystem.Models.Implementation;
+using UnitSystem.Model;
+using UnitSystem.Model.Implementation;
 
-namespace UnitSystemTest.Models.Implementation
+namespace UnitSystemTest.Model.Implementation
 {
   public class BaseUnitSystemManagerTest
   {

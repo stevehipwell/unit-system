@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnitSystem.Models
+namespace UnitSystem.Model
 {
   public interface IUnitOfMeasureCollection : IReadOnlyCollection<IUnitOfMeasure>
   {

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using UnitSystem.Models;
+using UnitSystem.Model;
 using UnitSystem.Loader;
 
-namespace UnitSystem.Models.Implementation
+namespace UnitSystem.Model.Implementation
 {
   public class BaseUnitSystemManager : IUnitSystemManager
   {

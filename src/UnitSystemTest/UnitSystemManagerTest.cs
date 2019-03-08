@@ -3,8 +3,8 @@ using FakeItEasy;
 using Xunit;
 
 using UnitSystem;
-using UnitSystem.Models;
-using UnitSystem.Models.Implementation;
+using UnitSystem.Model;
+using UnitSystem.Model.Implementation;
 using UnitSystem.Loader;
 
 namespace UnitSystemTest

@@ -1,6 +1,6 @@
 using System;
 
-namespace UnitSystem.Models
+namespace UnitSystem.Model
 {
   public interface IScalarUnitOfMeasure : IUnitOfMeasure
   {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using UnitSystem.Models;
+using UnitSystem.Model;
 
-namespace UnitSystem.Models.Implementation
+namespace UnitSystem.Model.Implementation
 {
   public abstract class UnitOfMeasure : IUnitOfMeasure
   {
